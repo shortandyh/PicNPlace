@@ -7,23 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		762D0174214870F00048B868 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0173214870F00048B868 /* PhotoCollectionViewController.swift */; };
+		762D0176214871110048B868 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0175214871110048B868 /* PhotoCollectionViewCell.swift */; };
+		762D0178214871330048B868 /* LivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0177214871330048B868 /* LivePhotoViewController.swift */; };
+		7630344321388C6F0066753B /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630344221388C6F0066753B /* ImageViewCell.swift */; };
+		7630344521388DD20066753B /* Snapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630344421388DD20066753B /* Snapped.swift */; };
+		7651BB4A21355BD200D2D332 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4621355BD100D2D332 /* RoundedImageView.swift */; };
+		7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4721355BD100D2D332 /* RoundedShadowView.swift */; };
+		7651BB4C21355BD200D2D332 /* ProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4821355BD100D2D332 /* ProjectsCell.swift */; };
+		7651BB4D21355BD200D2D332 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */; };
+		7651BB5221355C1D00D2D332 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5121355C1D00D2D332 /* DataService.swift */; };
+		7651BB5521355C4800D2D332 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5421355C4800D2D332 /* Project.swift */; };
+		7651BB572135617300D2D332 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB562135617300D2D332 /* GalleryVC.swift */; };
+		7651BB59213562B000D2D332 /* ConMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB58213562B000D2D332 /* ConMenuVC.swift */; };
+		7651BB5C2135F7E200D2D332 /* PicNPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */; };
+		7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB7E2135FEC600D2D332 /* ProjectCell.swift */; };
 		769A929421353798005EA54A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A929321353798005EA54A /* AppDelegate.swift */; };
-		769A929621353798005EA54A /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A929521353798005EA54A /* FirstViewController.swift */; };
-		769A929821353798005EA54A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A929721353798005EA54A /* SecondViewController.swift */; };
+		769A929621353798005EA54A /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A929521353798005EA54A /* CameraVC.swift */; };
+		769A929821353798005EA54A /* ProjectsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769A929721353798005EA54A /* ProjectsVC.swift */; };
 		769A929B21353799005EA54A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929921353799005EA54A /* Main.storyboard */; };
 		769A929D2135379A005EA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769A929C2135379A005EA54A /* Assets.xcassets */; };
 		769A92A02135379A005EA54A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929E2135379A005EA54A /* LaunchScreen.storyboard */; };
+		76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */; };
+		76F335C02140809C00C4C5F8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F335BF2140809C00C4C5F8 /* PersistenceService.swift */; };
+		76F335C32140877000C4C5F8 /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F335C12140877000C4C5F8 /* Projects+CoreDataClass.swift */; };
+		76F335C42140877000C4C5F8 /* Projects+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F335C22140877000C4C5F8 /* Projects+CoreDataProperties.swift */; };
+		CEB15DEAE1F4C833DC11EDA3 /* Pods_PicNPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicNPlace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DBE22E584F75E52EB52F909 /* Pods-PicNPlace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.debug.xcconfig"; sourceTree = "<group>"; };
+		762D0173214870F00048B868 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		762D0175214871110048B868 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		762D0177214871330048B868 /* LivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoViewController.swift; sourceTree = "<group>"; };
+		7630344221388C6F0066753B /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		7630344421388DD20066753B /* Snapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapped.swift; sourceTree = "<group>"; };
+		7651BB4621355BD100D2D332 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		7651BB4721355BD100D2D332 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
+		7651BB4821355BD100D2D332 /* ProjectsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCell.swift; sourceTree = "<group>"; };
+		7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		7651BB5121355C1D00D2D332 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7651BB5421355C4800D2D332 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		7651BB562135617300D2D332 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		7651BB58213562B000D2D332 /* ConMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConMenuVC.swift; sourceTree = "<group>"; };
+		7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicNPlace.xcdatamodel; sourceTree = "<group>"; };
+		7651BB7E2135FEC600D2D332 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		769A929021353798005EA54A /* PicNPlace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicNPlace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		769A929321353798005EA54A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		769A929521353798005EA54A /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		769A929721353798005EA54A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		769A929521353798005EA54A /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		769A929721353798005EA54A /* ProjectsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsVC.swift; sourceTree = "<group>"; };
 		769A929A21353799005EA54A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		769A929C2135379A005EA54A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		769A929F2135379A005EA54A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		769A92A12135379A005EA54A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		76F335BF2140809C00C4C5F8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
+		76F335C12140877000C4C5F8 /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataClass.swift"; path = "PicNPlace/Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
+		76F335C22140877000C4C5F8 /* Projects+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Projects+CoreDataProperties.swift"; path = "PicNPlace/Projects+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +73,65 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB15DEAE1F4C833DC11EDA3 /* Pods_PicNPlace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7651BB4421355B9F00D2D332 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				769A929521353798005EA54A /* CameraVC.swift */,
+				769A929721353798005EA54A /* ProjectsVC.swift */,
+				7651BB562135617300D2D332 /* GalleryVC.swift */,
+				7651BB58213562B000D2D332 /* ConMenuVC.swift */,
+				76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7651BB4521355BAF00D2D332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7651BB4821355BD100D2D332 /* ProjectsCell.swift */,
+				7651BB4621355BD100D2D332 /* RoundedImageView.swift */,
+				7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */,
+				7651BB4721355BD100D2D332 /* RoundedShadowView.swift */,
+				7651BB7E2135FEC600D2D332 /* ProjectCell.swift */,
+				7630344221388C6F0066753B /* ImageViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7651BB5021355C0F00D2D332 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7651BB5121355C1D00D2D332 /* DataService.swift */,
+				76F335BF2140809C00C4C5F8 /* PersistenceService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7651BB5321355C3F00D2D332 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7651BB5421355C4800D2D332 /* Project.swift */,
+				7630344421388DD20066753B /* Snapped.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		769A928721353798005EA54A = {
 			isa = PBXGroup;
 			children = (
+				76F335C12140877000C4C5F8 /* Projects+CoreDataClass.swift */,
+				76F335C22140877000C4C5F8 /* Projects+CoreDataProperties.swift */,
 				769A929221353798005EA54A /* PicNPlace */,
 				769A929121353798005EA54A /* Products */,
+				B804F7AF13859C9FD70EC712 /* Pods */,
+				E5D6DDAAA10167AFABC532DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +146,38 @@
 		769A929221353798005EA54A /* PicNPlace */ = {
 			isa = PBXGroup;
 			children = (
+				7651BB5321355C3F00D2D332 /* Model */,
+				7651BB5021355C0F00D2D332 /* Services */,
+				7651BB4521355BAF00D2D332 /* View */,
+				7651BB4421355B9F00D2D332 /* Controller */,
 				769A929321353798005EA54A /* AppDelegate.swift */,
-				769A929521353798005EA54A /* FirstViewController.swift */,
-				769A929721353798005EA54A /* SecondViewController.swift */,
+				762D0173214870F00048B868 /* PhotoCollectionViewController.swift */,
+				762D0175214871110048B868 /* PhotoCollectionViewCell.swift */,
+				762D0177214871330048B868 /* LivePhotoViewController.swift */,
 				769A929921353799005EA54A /* Main.storyboard */,
 				769A929C2135379A005EA54A /* Assets.xcassets */,
 				769A929E2135379A005EA54A /* LaunchScreen.storyboard */,
 				769A92A12135379A005EA54A /* Info.plist */,
+				7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */,
 			);
 			path = PicNPlace;
+			sourceTree = "<group>";
+		};
+		B804F7AF13859C9FD70EC712 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DBE22E584F75E52EB52F909 /* Pods-PicNPlace.debug.xcconfig */,
+				90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5D6DDAAA10167AFABC532DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +187,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 769A92A42135379A005EA54A /* Build configuration list for PBXNativeTarget "PicNPlace" */;
 			buildPhases = (
+				33A192D8B48B5C0F2F080160 /* [CP] Check Pods Manifest.lock */,
 				769A928C21353798005EA54A /* Sources */,
 				769A928D21353798005EA54A /* Frameworks */,
 				769A928E21353798005EA54A /* Resources */,
+				04F7DC275D967F4B3915240E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +248,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04F7DC275D967F4B3915240E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ContextMenu/ContextMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ContextMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		33A192D8B48B5C0F2F080160 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PicNPlace-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		769A928C21353798005EA54A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				769A929821353798005EA54A /* SecondViewController.swift in Sources */,
+				7651BB5521355C4800D2D332 /* Project.swift in Sources */,
+				7651BB572135617300D2D332 /* GalleryVC.swift in Sources */,
+				7651BB4D21355BD200D2D332 /* RoundedShadowButton.swift in Sources */,
+				76F335C32140877000C4C5F8 /* Projects+CoreDataClass.swift in Sources */,
+				7651BB59213562B000D2D332 /* ConMenuVC.swift in Sources */,
+				7651BB4A21355BD200D2D332 /* RoundedImageView.swift in Sources */,
+				76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */,
+				769A929821353798005EA54A /* ProjectsVC.swift in Sources */,
+				7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */,
 				769A929421353798005EA54A /* AppDelegate.swift in Sources */,
-				769A929621353798005EA54A /* FirstViewController.swift in Sources */,
+				76F335C42140877000C4C5F8 /* Projects+CoreDataProperties.swift in Sources */,
+				762D0176214871110048B868 /* PhotoCollectionViewCell.swift in Sources */,
+				76F335C02140809C00C4C5F8 /* PersistenceService.swift in Sources */,
+				7630344321388C6F0066753B /* ImageViewCell.swift in Sources */,
+				7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */,
+				769A929621353798005EA54A /* CameraVC.swift in Sources */,
+				762D0174214870F00048B868 /* PhotoCollectionViewController.swift in Sources */,
+				7651BB5C2135F7E200D2D332 /* PicNPlace.xcdatamodeld in Sources */,
+				7651BB4C21355BD200D2D332 /* ProjectsCell.swift in Sources */,
+				762D0178214871330048B868 /* LivePhotoViewController.swift in Sources */,
+				7651BB5221355C1D00D2D332 /* DataService.swift in Sources */,
+				7630344521388DD20066753B /* Snapped.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +455,7 @@
 		};
 		769A92A52135379A005EA54A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DBE22E584F75E52EB52F909 /* Pods-PicNPlace.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +474,7 @@
 		};
 		769A92A62135379A005EA54A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +513,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */,
+			);
+			currentVersion = 7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */;
+			path = PicNPlace.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 769A928821353798005EA54A /* Project object */;
 }
