@@ -13,7 +13,7 @@ import CoreData
 
 class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
-    //Variables
+    //MARK: - Variables
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -22,7 +22,10 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     var project = [Projects]()
     var effect: UIVisualEffect!
     
-    //Outlets
+    //MARK: - Constants
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    //MARK: - Outlets
     @IBOutlet weak var captureImageView: RoundedImageView!
     @IBOutlet weak var thumbBtn: RoundedShadowButton!
     @IBOutlet weak var flashBtn: RoundedShadowButton!
@@ -39,6 +42,8 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
     @IBOutlet weak var tableView: UITableView!
     
+
+    //MARK: - Override View functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -46,15 +51,8 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         visualEffectView.effect = nil
         visualEffectView.isHidden = true
         
-        let fetchRequest: NSFetchRequest<Projects> = Projects.fetchRequest()
+        loadProjects()
         
-        do {
-            let project = try PersistenceService.context.fetch(fetchRequest)
-            self.project = project
-            self.tableView.reloadData()
-        } catch {
-            
-        }
        roundedLblView.isHidden = true
         captureImageView.isHidden = true
         thumbBtn.isHidden = true
@@ -64,19 +62,14 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         
         view.addSubview(captureImageView)
         view.addSubview(flipTableView)
-        //horiPopUpConstraint.constant = -50
-        
-//        if captureImageView.isHidden == true {
-//            self.thumbnailBtn.isHidden = true
-//        } else {
-//            
-//        }
+
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         previewLayer.frame = cameraView.bounds
+        
         
     }
     
@@ -139,6 +132,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
 
     @IBAction func showPopUp(_ sender: Any) {
         perform(#selector(flip), with: nil, afterDelay: 0)
+        loadProjects()
 //        horiPopUpConstraint.constant = -50
 //        UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
     }
@@ -159,6 +153,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
     @IBAction func clearSave(_ sender: Any) {
         perform(#selector(flipBack), with: nil, afterDelay: 0)
+        
     }
     
     @IBAction func thumbnailBtn(_ sender: UIButton) {
@@ -238,6 +233,20 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
 //        }
     }
     
+    func loadProjects() {
+        
+        let request : NSFetchRequest<Projects> = Projects.fetchRequest()
+        
+        do {
+            project = try context.fetch(request)
+        } catch {
+            print("Error saving project \(error)")
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -248,11 +257,14 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
-        cell.textLabel!.text = project[indexPath.row].name
-        cell.textLabel!.font = UIFont(name: "Helvetica Neue Light", size: 18.0)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "flippedProjectCell", for: indexPath)
+        cell.textLabel?.text = project[indexPath.row].name
+//        let cell = UITableViewCell(style: .default, reuseIdentifier: nil)
+//        cell.textLabel?.text = project[indexPath.row].name
+        cell.textLabel?.font = UIFont(name: "Helvetica Neue Light", size: 18.0)
         //cell.detailTextLabel?.text = ""
         return cell
+        
     }
 }
 

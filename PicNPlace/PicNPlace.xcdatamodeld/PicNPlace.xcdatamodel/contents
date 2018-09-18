@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class"/>
-    <entity name="ProjectData" representedClassName="ProjectData" syncable="YES" codeGenerationType="class">
+    <entity name="ProjectImage" representedClassName="ProjectImage" syncable="YES">
         <attribute name="sImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="parentProjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Projects" inverseName="projectImages" inverseEntity="Projects" syncable="YES"/>
     </entity>
     <entity name="Projects" representedClassName="Projects" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="projectImages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ProjectImage" inverseName="parentProjects" inverseEntity="ProjectImage" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Entity" positionX="-63" positionY="-9" width="128" height="45"/>
-        <element name="ProjectData" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="Projects" positionX="-63" positionY="-9" width="128" height="60"/>
+        <element name="ProjectImage" positionX="-38" positionY="-81" width="128" height="73"/>
+        <element name="Projects" positionX="-243" positionY="-81" width="126" height="73"/>
     </elements>
 </model>

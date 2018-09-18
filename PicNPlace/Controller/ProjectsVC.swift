@@ -17,20 +17,31 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var addProjTextField: UITextField!
     
-    var project = [Projects]()
+    var projects = [Projects]()
+    
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fetchRequest: NSFetchRequest<Projects> = Projects.fetchRequest()
+        loadProjects()
         
-        do {
-            let project = try PersistenceService.context.fetch(fetchRequest)
-            self.project = project
-            self.tableView.reloadData()
-        } catch {
-            
-        }
+        
+        //MARK: - Kilo Loco
+        
+//        let fetchRequest: NSFetchRequest<Projects> = Projects.fetchRequest()
+//
+//        do {
+//            let project = try PersistenceService.context.fetch(fetchRequest)
+//            self.project = project
+//            self.tableView.reloadData()
+//        } catch {
+//
+//        }
+        
+        
+        
+        
 //        let project = ProjectData()
 //        project.image =
         
@@ -40,26 +51,95 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        tableView.delegate = self
     }
     
-    @IBAction func addBtn(_ sender: Any) {
+    func saveProjects() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving project \(error)")
+        }
+        
+        tableView.reloadData()
+        
     }
     
+    func loadProjects() {
+        
+        let request : NSFetchRequest<Projects> = Projects.fetchRequest()
+        
+        do {
+            projects = try context.fetch(request)
+        } catch {
+            print("Error saving project \(error)")
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
+    @IBAction func addBtn(_ sender: Any) {
+        
+        
+    }
+    
+    
+    
     @IBAction func onPlusTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Add Project", message: nil, preferredStyle: .alert)
-        alert.addTextField { (textField) in
+        
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add Project", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add", style: .default) { (action) in
+            
+            let newProject = Projects(context: self.context)
+            newProject.name = textField.text!
+            
+            self.projects.append(newProject)
+            
+            self.saveProjects()
+            
+        }
+        
+        alert.addAction(action)
+
+        
+        alert.addTextField { (alertTextField) in
+            textField = alertTextField
             textField.placeholder = "Project Name"
         }
-        let action = UIAlertAction(title: "Add", style: .default) { (_) in
-            let name = alert.textFields?.first?.text
-//            print(name!)
-            let project = Projects(context: PersistenceService.context)
-            project.name = name
-            PersistenceService.saveContext()
-            self.project.append(project)
-            self.tableView.reloadData()
-        }
-        alert.addAction(action)
+        
         present(alert, animated: true, completion: nil)
+        
     }
+        
+        
+        //Kilo Loco version
+        
+//        let action = UIAlertAction(title: "Add Project Name", style: .default) { (_) in
+//            let name = alert.textFields?.first?.text
+////            print(name!)
+//            let project = Projects(context: PersistenceService.context)
+//            project.name = name
+//            PersistenceService.saveContext()
+//            self.project.append(project)
+//            self.tableView.reloadData()
+//        }
+        
+        
+//        let action = UIAlertAction(title: "Add Project Name", style: .default) { (_) in
+//            let name = alert.textFields?.first?.text
+////            print(name!)
+//            let project = Projects(context: self.context)
+//            project.name = name
+//
+//            self.projects.append(project)
+//            self.tableView.reloadData()
+//        }
+
+        
+        
+        
+
     
     
     
@@ -74,13 +154,12 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return project.count
+        return projects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
-        cell.textLabel?.text = project[indexPath.row].name
-        //cell.detailTextLabel?.text = ""
+       let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell", for: indexPath)
+        cell.textLabel?.text = projects[indexPath.row].name
         return cell
     }
     
@@ -90,10 +169,11 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            PersistenceService.context.delete(project[indexPath.row])
-            project.remove(at: indexPath.row)
+            self.context.delete(projects[indexPath.row])
+            projects.remove(at: indexPath.row)
             
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.saveProjects()
             
         }
     }
