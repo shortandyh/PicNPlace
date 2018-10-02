@@ -178,6 +178,24 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let newProject = projects[indexPath.row]
+//        let project = projects[indexPath.row]
+        performSegue(withIdentifier: "SnappedVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let snappedVC = segue.destination as! SnappedVC
+//            assert(sender as? Project != nil)
+//            snappedVC.initSnapped(project: sender as! Project)
+            if let indexPath = tableView.indexPathForSelectedRow {
+                snappedVC.selectedProject = projects[indexPath.row]
+            }
+        
+    }
+    
+    
+    
 //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
 //            managedObjectContext.delete(sessions[indexPath.row])

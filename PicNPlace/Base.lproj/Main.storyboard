@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -80,7 +81,7 @@
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pil-S8-rbO" customClass="RoundedShadowButton" customModule="PicNPlace" customModuleProvider="target">
-                                <rect key="frame" x="157.5" y="552" width="59" height="50"/>
+                                <rect key="frame" x="57" y="552" width="260" height="50"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.3771136558219178" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ILp-aj-u1Z"/>
@@ -212,9 +213,9 @@
                             <constraint firstItem="XdH-Bn-anD" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="drt-kG-h7Z"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                             <constraint firstItem="dmr-0V-5iu" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="l57-mQ-fhU"/>
-                            <constraint firstItem="pil-S8-rbO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="57" id="l9C-GJ-3KV"/>
+                            <constraint firstItem="pil-S8-rbO" firstAttribute="leading" relation="lessThanOrEqual" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="57" id="l9C-GJ-3KV"/>
                             <constraint firstItem="XdH-Bn-anD" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="-50" id="ngH-ZI-Jiq"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pil-S8-rbO" secondAttribute="trailing" constant="58" id="rCY-xa-Nu1"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pil-S8-rbO" secondAttribute="trailing" constant="58" id="rCY-xa-Nu1"/>
                             <constraint firstItem="LaO-W7-h3U" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="40" id="tiV-os-1hu"/>
                             <constraint firstItem="X8C-4d-FTU" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="uZC-iD-DXO"/>
                         </constraints>
@@ -245,7 +246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
+            <point key="canvasLocation" x="750" y="-415"/>
         </scene>
         <!--ProjectsVC-->
         <scene sceneID="wg7-f3-ORb">
@@ -365,7 +366,7 @@
                         <outlet property="addProjTextField" destination="R5d-jG-k1H" id="XJw-pp-gtZ"/>
                         <outlet property="addProjView" destination="wcC-dD-yz7" id="CMZ-xe-tMt"/>
                         <outlet property="tableView" destination="wze-Tc-0Tc" id="YYt-QU-N2b"/>
-                        <segue destination="bhK-UI-fKb" kind="show" id="Vlk-OY-Sqz"/>
+                        <segue destination="bhK-UI-fKb" kind="show" identifier="SnappedVC" id="Vlk-OY-Sqz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -407,10 +408,10 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
         </scene>
-        <!--Photo Collection View Controller-->
+        <!--SnappedVC-->
         <scene sceneID="650-nc-F9X">
             <objects>
-                <viewController id="bhK-UI-fKb" customClass="PhotoCollectionViewController" customModule="PicNPlace" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bhK-UI-fKb" customClass="SnappedVC" customModule="PicNPlace" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ff5-i1-96x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -446,32 +447,46 @@
                                 <rect key="frame" x="0.0" y="87" width="375" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="66h-YY-4qa">
-                                    <size key="itemSize" width="91" height="91"/>
+                                    <size key="itemSize" width="148" height="164"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Zwd-ay-VqU" customClass="PhotoCollectionViewCell" customModule="PicNPlace" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SnappedPics" id="Zwd-ay-VqU" customClass="SnappedPics" customModule="PicNPlace" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="148" height="164"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIQ-zb-yB1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="91" height="91"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shirt01" translatesAutoresizingMaskIntoConstraints="NO" id="qIQ-zb-yB1" userLabel="SnappedImage">
+                                                    <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="128" id="JL3-mi-ky7"/>
+                                                        <constraint firstAttribute="height" constant="128" id="hzQ-C1-PcY"/>
+                                                        <constraint firstAttribute="width" secondItem="qIQ-zb-yB1" secondAttribute="height" multiplier="1:1" id="thy-M5-wUc"/>
+                                                    </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4a-Uu-vHE" userLabel="SnappedTitle">
+                                                    <rect key="frame" x="10" y="138" width="128" height="26"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="qIQ-zb-yB1" firstAttribute="top" secondItem="Zwd-ay-VqU" secondAttribute="top" id="Gyk-Xf-KnK"/>
-                                            <constraint firstAttribute="trailing" secondItem="qIQ-zb-yB1" secondAttribute="trailing" id="S8J-rE-vzC"/>
-                                            <constraint firstAttribute="bottom" secondItem="qIQ-zb-yB1" secondAttribute="bottom" id="jyf-NJ-uFw"/>
-                                            <constraint firstItem="qIQ-zb-yB1" firstAttribute="leading" secondItem="Zwd-ay-VqU" secondAttribute="leading" id="mnP-aH-L61"/>
+                                            <constraint firstItem="y4a-Uu-vHE" firstAttribute="top" secondItem="qIQ-zb-yB1" secondAttribute="bottom" id="6e6-1e-j4j"/>
+                                            <constraint firstItem="qIQ-zb-yB1" firstAttribute="centerX" secondItem="Zwd-ay-VqU" secondAttribute="centerX" id="C76-SW-KrH"/>
+                                            <constraint firstItem="y4a-Uu-vHE" firstAttribute="trailing" secondItem="qIQ-zb-yB1" secondAttribute="trailing" id="D9Q-Sp-rXu"/>
+                                            <constraint firstItem="qIQ-zb-yB1" firstAttribute="top" secondItem="Zwd-ay-VqU" secondAttribute="top" constant="10" id="Gyk-Xf-KnK"/>
+                                            <constraint firstItem="y4a-Uu-vHE" firstAttribute="leading" secondItem="qIQ-zb-yB1" secondAttribute="leading" id="maR-LD-oaN"/>
+                                            <constraint firstAttribute="bottom" secondItem="y4a-Uu-vHE" secondAttribute="bottom" id="tAy-0O-UAw"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="photoImageView" destination="qIQ-zb-yB1" id="Jb2-Zg-j17"/>
+                                            <outlet property="snappedImage" destination="qIQ-zb-yB1" id="ZkI-kc-fP1"/>
+                                            <outlet property="snappedTitle" destination="y4a-Uu-vHE" id="dS6-mh-D9J"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -489,6 +504,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i8R-5e-XkD"/>
                     </view>
+                    <connections>
+                        <outlet property="snappedCollection" destination="Nuy-vf-HsG" id="FbI-kn-ASy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRT-hM-Q8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -742,6 +760,7 @@
         <image name="ProjectsIcon" width="46" height="46"/>
         <image name="ProjectsIcon_bk" width="46" height="46"/>
         <image name="first" width="30" height="30"/>
+        <image name="shirt01" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DZd-4O-llS"/>

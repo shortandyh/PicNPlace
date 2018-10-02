@@ -19,8 +19,19 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     var previewLayer: AVCaptureVideoPreviewLayer!
     var imagePickerController: UIImagePickerController!
     var photoData: Data?
-    var project = [Projects]()
     var effect: UIVisualEffect!
+    var projectName: String?
+    
+    var project = [Projects]()
+    var imageArray = [ProjectImage]()
+    
+    var CameraSnappedVC : SnappedVC = SnappedVC()
+    
+    var selectedProject : Projects? {
+        didSet{
+            loadProjects()
+        }
+    }
     
     //MARK: - Constants
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -53,7 +64,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         
         loadProjects()
         
-       roundedLblView.isHidden = true
+        roundedLblView.isHidden = true
         captureImageView.isHidden = true
         thumbBtn.isHidden = true
         flashBtn.isHidden = true
@@ -112,6 +123,8 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
             debugPrint(error)
         }
     }
+    
+    //MARK: - IBActions
 
     @IBAction func showGalleryBtn(_ sender: Any) {
 //        performSegue(withIdentifier: "gallerySegue", sender: self)
@@ -133,15 +146,11 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     @IBAction func showPopUp(_ sender: Any) {
         perform(#selector(flip), with: nil, afterDelay: 0)
         loadProjects()
-//        horiPopUpConstraint.constant = -50
-//        UIView.animate(withDuration: 0.3, animations: {self.view.layoutIfNeeded()})
     }
     
     @IBAction func closePopUp(_ sender: Any) {
         horiPopUpConstraint.constant = 600
         UIView.animate(withDuration: 0.2, animations: {self.view.layoutIfNeeded()})
-//        perform(#selector(flipBack), with: nil, afterDelay: 0.4)
-        
         self.captureImageView.isHidden = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
             self.flipTableView.isHidden = true
@@ -149,15 +158,26 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         visualEffectView.isHidden = true
         thumbBtn.isHidden = true
         flashBtn.isHidden = true
+        
+        saveImage()
+//        let image = UIImage(data: photoData!)
+//        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
+//        let newPic = ProjectImage(context: self.context)
+//        newPic.sImage = data
+//        newPic.sName = projectName
+//        newPic.parentProjects = CameraSnappedVC.selectedProject
     }
     
     @IBAction func clearSave(_ sender: Any) {
         perform(#selector(flipBack), with: nil, afterDelay: 0)
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+        self.flashBtn.isHidden = false
+        }
     }
     
     @IBAction func thumbnailBtn(_ sender: UIButton) {
-        self.saveImage(imageName: "Test.jpg")
+//        self.saveImage(imageName: "Test.jpg")
+        flashBtn.isHidden = true
     }
     
     @objc func didTapCameraView() {
@@ -167,16 +187,21 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     }
     
  
-
-    @objc func saveImage(imageName: String) {
+    //MARK: - Objective C Functions
+    @objc func saveImage() {
         //let fileManager = FileManager.default
-        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString) .appendingPathComponent(imageName)
+//        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString) .appendingPathComponent(imageName)
         let image = self.captureImageView.image
-        let data = UIImageJPEGRepresentation(image!, 1)
+        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
+//        let image = UIImage(data: photoData!)
+//        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
+        let newPic = ProjectImage(context: self.context)
+        newPic.sImage = data
+        newPic.sName = projectName
+        newPic.parentProjects = CameraSnappedVC.selectedProject
+
+//
         //fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
-        
-        
-        
         
     }
     
@@ -206,6 +231,8 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         
     }
     
+    
+    //MARK: - Functions
     func animateIn() {
         //self.view.addSubview(captureImageView)
         self.captureImageView.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
@@ -233,6 +260,17 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
 //        }
     }
     
+    func saveProjects() {
+        do {
+            try context.save()
+        } catch {
+            print("Error saving project \(error)")
+        }
+        
+        tableView.reloadData()
+        
+    }
+    
     func loadProjects() {
         
         let request : NSFetchRequest<Projects> = Projects.fetchRequest()
@@ -247,7 +285,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         
     }
     
-    
+    //MARK: - TableView setup
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -266,8 +304,18 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let self.projectName = project[indexPath.row]
+        if let indexPath = tableView.indexPathForSelectedRow {
+            self.projectName = project[indexPath.row].name
+        }
+    }
+    
+    
 }
 
+    //MARK: - Extension
 extension CameraVC: AVCapturePhotoCaptureDelegate {
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         if let error = error {
@@ -284,9 +332,12 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             horiPopUpConstraint.constant = -50
             
         }
+        
     }
+    
     @IBAction func unwindFromGalleryVC (unwindSegue: UIStoryboardSegue){
         
     }
+    
 }
 
