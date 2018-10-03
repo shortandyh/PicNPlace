@@ -13,10 +13,7 @@ import CoreData
 class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet var addProjView: UIView!
 
-    @IBOutlet weak var addProjTextField: UITextField!
-    
     var projects = [Projects]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -24,32 +21,15 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if projects.isEmpty == false {
+        
         loadProjects()
         
-        
-        //MARK: - Kilo Loco
-        
-//        let fetchRequest: NSFetchRequest<Projects> = Projects.fetchRequest()
-//
-//        do {
-//            let project = try PersistenceService.context.fetch(fetchRequest)
-//            self.project = project
-//            self.tableView.reloadData()
-//        } catch {
-//
-//        }
-        
-        
-        
-        
-//        let project = ProjectData()
-//        project.image =
-        
-//        title = "Projects Demo"
-//        preferredContentSize = CGSize(width: 300, height: 550)
-//        tableView.dataSource = self
-//        tableView.delegate = self
+        }
+
     }
+    
+    
     
     func saveProjects() {
         do {
@@ -76,14 +56,11 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    @IBAction func addBtn(_ sender: Any) {
-        
-        
-    }
+
     
     
     
-    @IBAction func onPlusTapped(_ sender: Any) {
+    @IBAction func onPlusTapped(_ sender: UIBarButtonItem) {
         
         var textField = UITextField()
         
@@ -100,47 +77,17 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
         }
         
-        alert.addAction(action)
-
-        
         alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "Project Name"
             textField = alertTextField
-            textField.placeholder = "Project Name"
         }
         
+        alert.addAction(action)
+
         present(alert, animated: true, completion: nil)
         
     }
         
-        
-        //Kilo Loco version
-        
-//        let action = UIAlertAction(title: "Add Project Name", style: .default) { (_) in
-//            let name = alert.textFields?.first?.text
-////            print(name!)
-//            let project = Projects(context: PersistenceService.context)
-//            project.name = name
-//            PersistenceService.saveContext()
-//            self.project.append(project)
-//            self.tableView.reloadData()
-//        }
-        
-        
-//        let action = UIAlertAction(title: "Add Project Name", style: .default) { (_) in
-//            let name = alert.textFields?.first?.text
-////            print(name!)
-//            let project = Projects(context: self.context)
-//            project.name = name
-//
-//            self.projects.append(project)
-//            self.tableView.reloadData()
-//        }
-
-        
-        
-        
-
-    
     
     
     
@@ -193,70 +140,6 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         
     }
-    
-    
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            managedObjectContext.delete(sessions[indexPath.row])
-//            do {
-//                try managedObjectContext.save()
-//                tableView.reloadData()
-//            } catch let error as NSError {
-//                print("Could not save. \(error), \(error.userInfo)")
-//            }
-//        }
-//    }
-    
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let project = DataService.instance.getProjects()[indexPath.row]
-//        performSegue(withIdentifier: "ProjectsVC", sender: project)
-//    }
-    
-    
-    
-    //Devslopes array
-    
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return DataService.instance.getProjects().count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectCell") as? ProjectCell {
-//            let project = DataService.instance.getProjects()[indexPath.row]
-//            cell.updateViews(project: project)
-//            return cell
-//        } else {
-//            return ProjectCell()
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let project = DataService.instance.getProjects()[indexPath.row]
-//        performSegue(withIdentifier: "ProjectsVC", sender: project)
-//    }
-    
-    
-    
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let productsVC = segue.destination as? ProjectsVC {
-//            let barBtn = UIBarButtonItem()
-//            barBtn.title = ""
-//            navigationItem.backBarButtonItem = barBtn
-//            assert(sender as? Project != nil)
-//            ProjectsVC.initSnapped(project: sender as! Project)
-//            
-//            
-//        }
-//    }
-   
-
-    
     
     
 

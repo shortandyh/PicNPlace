@@ -7,19 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		762D0174214870F00048B868 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0173214870F00048B868 /* PhotoCollectionViewController.swift */; };
-		762D0176214871110048B868 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0175214871110048B868 /* PhotoCollectionViewCell.swift */; };
-		762D0178214871330048B868 /* LivePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762D0177214871330048B868 /* LivePhotoViewController.swift */; };
-		7630344321388C6F0066753B /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630344221388C6F0066753B /* ImageViewCell.swift */; };
-		7630344521388DD20066753B /* Snapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7630344421388DD20066753B /* Snapped.swift */; };
 		7651BB4A21355BD200D2D332 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4621355BD100D2D332 /* RoundedImageView.swift */; };
 		7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4721355BD100D2D332 /* RoundedShadowView.swift */; };
-		7651BB4C21355BD200D2D332 /* ProjectsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4821355BD100D2D332 /* ProjectsCell.swift */; };
 		7651BB4D21355BD200D2D332 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */; };
-		7651BB5221355C1D00D2D332 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5121355C1D00D2D332 /* DataService.swift */; };
-		7651BB5521355C4800D2D332 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5421355C4800D2D332 /* Project.swift */; };
-		7651BB572135617300D2D332 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB562135617300D2D332 /* GalleryVC.swift */; };
-		7651BB59213562B000D2D332 /* ConMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB58213562B000D2D332 /* ConMenuVC.swift */; };
 		7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB7E2135FEC600D2D332 /* ProjectCell.swift */; };
 		7654AD642151A90E009279A8 /* ProjectImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD622151A90E009279A8 /* ProjectImage+CoreDataClass.swift */; };
 		7654AD652151A90E009279A8 /* ProjectImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD632151A90E009279A8 /* ProjectImage+CoreDataProperties.swift */; };
@@ -34,27 +24,15 @@
 		769A929D2135379A005EA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769A929C2135379A005EA54A /* Assets.xcassets */; };
 		769A92A02135379A005EA54A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929E2135379A005EA54A /* LaunchScreen.storyboard */; };
 		76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */; };
-		76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */; };
-		76F335C02140809C00C4C5F8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F335BF2140809C00C4C5F8 /* PersistenceService.swift */; };
 		CEB15DEAE1F4C833DC11EDA3 /* Pods_PicNPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicNPlace.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DBE22E584F75E52EB52F909 /* Pods-PicNPlace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.debug.xcconfig"; sourceTree = "<group>"; };
-		762D0173214870F00048B868 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
-		762D0175214871110048B868 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		762D0177214871330048B868 /* LivePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivePhotoViewController.swift; sourceTree = "<group>"; };
-		7630344221388C6F0066753B /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
-		7630344421388DD20066753B /* Snapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snapped.swift; sourceTree = "<group>"; };
 		7651BB4621355BD100D2D332 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		7651BB4721355BD100D2D332 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
-		7651BB4821355BD100D2D332 /* ProjectsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsCell.swift; sourceTree = "<group>"; };
 		7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
-		7651BB5121355C1D00D2D332 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
-		7651BB5421355C4800D2D332 /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
-		7651BB562135617300D2D332 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
-		7651BB58213562B000D2D332 /* ConMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConMenuVC.swift; sourceTree = "<group>"; };
 		7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicNPlace.xcdatamodel; sourceTree = "<group>"; };
 		7651BB7E2135FEC600D2D332 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		7654AD622151A90E009279A8 /* ProjectImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectImage+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -74,8 +52,6 @@
 		76B20E2721641F42006FFB05 /* PicNPlace 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 2.xcdatamodel"; sourceTree = "<group>"; };
 		76B20E282164DB23006FFB05 /* PicNPlace 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 3.xcdatamodel"; sourceTree = "<group>"; };
 		76B20E2A2165390E006FFB05 /* PicNPlace 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 4.xcdatamodel"; sourceTree = "<group>"; };
-		76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
-		76F335BF2140809C00C4C5F8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,9 +73,6 @@
 				769A929521353798005EA54A /* CameraVC.swift */,
 				769A929721353798005EA54A /* ProjectsVC.swift */,
 				76755AA62159816200B83476 /* SnappedVC.swift */,
-				7651BB562135617300D2D332 /* GalleryVC.swift */,
-				7651BB58213562B000D2D332 /* ConMenuVC.swift */,
-				76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -107,12 +80,10 @@
 		7651BB4521355BAF00D2D332 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7651BB4821355BD100D2D332 /* ProjectsCell.swift */,
 				7651BB4621355BD100D2D332 /* RoundedImageView.swift */,
 				7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */,
 				7651BB4721355BD100D2D332 /* RoundedShadowView.swift */,
 				7651BB7E2135FEC600D2D332 /* ProjectCell.swift */,
-				7630344221388C6F0066753B /* ImageViewCell.swift */,
 				76755AA421597E0F00B83476 /* SnappedPics.swift */,
 			);
 			path = View;
@@ -121,8 +92,6 @@
 		7651BB5021355C0F00D2D332 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				7651BB5121355C1D00D2D332 /* DataService.swift */,
-				76F335BF2140809C00C4C5F8 /* PersistenceService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -130,8 +99,6 @@
 		7651BB5321355C3F00D2D332 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7651BB5421355C4800D2D332 /* Project.swift */,
-				7630344421388DD20066753B /* Snapped.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,9 +133,6 @@
 				7651BB4521355BAF00D2D332 /* View */,
 				7651BB4421355B9F00D2D332 /* Controller */,
 				769A929321353798005EA54A /* AppDelegate.swift */,
-				762D0173214870F00048B868 /* PhotoCollectionViewController.swift */,
-				762D0175214871110048B868 /* PhotoCollectionViewCell.swift */,
-				762D0177214871330048B868 /* LivePhotoViewController.swift */,
 				769A929921353799005EA54A /* Main.storyboard */,
 				769A929C2135379A005EA54A /* Assets.xcassets */,
 				769A929E2135379A005EA54A /* LaunchScreen.storyboard */,
@@ -307,32 +271,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7651BB5521355C4800D2D332 /* Project.swift in Sources */,
 				76755AA521597E0F00B83476 /* SnappedPics.swift in Sources */,
 				7654AD652151A90E009279A8 /* ProjectImage+CoreDataProperties.swift in Sources */,
-				7651BB572135617300D2D332 /* GalleryVC.swift in Sources */,
 				7654AD692151A9D9009279A8 /* Projects+CoreDataProperties.swift in Sources */,
 				7651BB4D21355BD200D2D332 /* RoundedShadowButton.swift in Sources */,
-				7651BB59213562B000D2D332 /* ConMenuVC.swift in Sources */,
 				7651BB4A21355BD200D2D332 /* RoundedImageView.swift in Sources */,
-				76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */,
 				769A929821353798005EA54A /* ProjectsVC.swift in Sources */,
 				7654AD642151A90E009279A8 /* ProjectImage+CoreDataClass.swift in Sources */,
 				76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */,
 				7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */,
 				769A929421353798005EA54A /* AppDelegate.swift in Sources */,
-				762D0176214871110048B868 /* PhotoCollectionViewCell.swift in Sources */,
-				76F335C02140809C00C4C5F8 /* PersistenceService.swift in Sources */,
-				7630344321388C6F0066753B /* ImageViewCell.swift in Sources */,
 				7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */,
 				769A929621353798005EA54A /* CameraVC.swift in Sources */,
-				762D0174214870F00048B868 /* PhotoCollectionViewController.swift in Sources */,
 				76755AA72159816200B83476 /* SnappedVC.swift in Sources */,
-				7651BB4C21355BD200D2D332 /* ProjectsCell.swift in Sources */,
-				762D0178214871330048B868 /* LivePhotoViewController.swift in Sources */,
 				7654AD682151A9D9009279A8 /* Projects+CoreDataClass.swift in Sources */,
-				7651BB5221355C1D00D2D332 /* DataService.swift in Sources */,
-				7630344521388DD20066753B /* Snapped.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

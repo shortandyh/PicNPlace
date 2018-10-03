@@ -40,17 +40,11 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     @IBOutlet weak var captureImageView: RoundedImageView!
     @IBOutlet weak var thumbBtn: RoundedShadowButton!
     @IBOutlet weak var flashBtn: RoundedShadowButton!
-    @IBOutlet weak var identificationLbl: UILabel!
-    @IBOutlet weak var confidenceLbl: UILabel!
     @IBOutlet weak var cameraView: UIView!
-    @IBOutlet weak var roundedLblView: RoundedShadowView!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
-    
     @IBOutlet weak var flipTableView: RoundedImageView!
-    
     @IBOutlet weak var imageHoriPopUpConstraint: NSLayoutConstraint!
     @IBOutlet weak var horiPopUpConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var tableView: UITableView!
     
 
@@ -64,7 +58,6 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         
         loadProjects()
         
-        roundedLblView.isHidden = true
         captureImageView.isHidden = true
         thumbBtn.isHidden = true
         flashBtn.isHidden = true
