@@ -8,7 +8,7 @@
 
 import UIKit
 import AVFoundation
-import ContextMenu
+//import ContextMenu
 import CoreData
 
 class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITableViewDataSource, UITableViewDelegate {
@@ -146,9 +146,10 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     @IBAction func showPopUp(_ sender: Any) {
         perform(#selector(flip), with: nil, afterDelay: 0)
         loadProjects()
+        flashBtn.isHidden = true
     }
     
-    @IBAction func closePopUp(_ sender: Any) {
+    @IBAction func savePhotoToProject(_ sender: Any) {
         horiPopUpConstraint.constant = 600
         UIView.animate(withDuration: 0.2, animations: {self.view.layoutIfNeeded()})
         self.captureImageView.isHidden = true
@@ -160,12 +161,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         flashBtn.isHidden = true
         
         saveImage()
-//        let image = UIImage(data: photoData!)
-//        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
-//        let newPic = ProjectImage(context: self.context)
-//        newPic.sImage = data
-//        newPic.sName = projectName
-//        newPic.parentProjects = CameraSnappedVC.selectedProject
+
     }
     
     @IBAction func clearSave(_ sender: Any) {
@@ -175,10 +171,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         }
     }
     
-    @IBAction func thumbnailBtn(_ sender: UIButton) {
-//        self.saveImage(imageName: "Test.jpg")
-        flashBtn.isHidden = true
-    }
+ 
     
     @objc func didTapCameraView() {
         let settings = AVCapturePhotoSettings()
@@ -189,16 +182,22 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
  
     //MARK: - Objective C Functions
     @objc func saveImage() {
-        //let fileManager = FileManager.default
-//        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString) .appendingPathComponent(imageName)
-        let image = self.captureImageView.image
-        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
-//        let image = UIImage(data: photoData!)
+
+//        let image = self.captureImageView.image
 //        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
+        let image = UIImage(data: photoData!)
+        let data = UIImageJPEGRepresentation(image!, 1) as NSData?
         let newPic = ProjectImage(context: self.context)
         newPic.sImage = data
         newPic.sName = projectName
         newPic.parentProjects = CameraSnappedVC.selectedProject
+        
+        do {
+            try context.save()
+        } catch {
+            print("Error saving project \(error)")
+        }
+        
 
 //
         //fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
@@ -335,9 +334,7 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
         
     }
     
-    @IBAction func unwindFromGalleryVC (unwindSegue: UIStoryboardSegue){
-        
-    }
+
     
 }
 

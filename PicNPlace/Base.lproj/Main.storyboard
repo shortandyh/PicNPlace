@@ -102,7 +102,6 @@
                                 </constraints>
                                 <connections>
                                     <action selector="showPopUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jTU-7n-ycV"/>
-                                    <action selector="thumbnailBtn:" destination="9pv-A4-QxB" eventType="touchUpInside" id="nXN-nU-ZsD"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmr-0V-5iu" customClass="RoundedImageView" customModule="PicNPlace" customModuleProvider="target">
@@ -145,8 +144,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="closePopUp:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8dC-Ix-Wjv"/>
-                                                    <action selector="saveToProjects:" destination="yLr-S9-S7S" eventType="touchUpInside" id="6kH-kE-3Cj"/>
+                                                    <action selector="savePhotoToProject:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8dC-Ix-Wjv"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z16-VF-7xV" userLabel="Clear">
@@ -272,7 +270,6 @@
                                         <rect key="frame" x="329" y="47.5" width="30" height="30"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
-                                            <action selector="addProjectBtnWasPressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wQR-wd-jqp"/>
                                             <action selector="onPlusTapped:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Qvi-Xa-kIs"/>
                                         </connections>
                                     </button>

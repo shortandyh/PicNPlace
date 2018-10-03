@@ -50,9 +50,9 @@ class SnappedVC: UIViewController, UICollectionViewDelegate, UICollectionViewDat
     
     func loadImages(with request : NSFetchRequest<ProjectImage> = ProjectImage.fetchRequest()) {
         
-        let predicate = NSPredicate(format: "parentProject.name MATCHES &@", selectedProject!.name!)
-        
-        request.predicate = predicate
+//        let predicate = NSPredicate(format: "parentProject.name MATCHES &@", selectedProject!.name!)
+//        
+//        request.predicate = predicate
         
         do {
             imageArray = try context.fetch(request)

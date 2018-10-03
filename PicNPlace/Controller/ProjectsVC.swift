@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import ContextMenu
+//import ContextMenu
 
 class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -255,8 +255,7 @@ class ProjectsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 //        }
 //    }
    
-    @IBAction func addProjectBtnWasPressed(_ sender: Any) {
-    }
+
     
     
     

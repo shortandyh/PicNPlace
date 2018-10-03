@@ -15,8 +15,8 @@ class ProjectCell: UITableViewCell {
     @IBOutlet weak var projectDescriptioinLbl: UILabel!
 //    @IBOutlet weak var projectsTitle: UIView!
     
-    func updateViews(project: Project) {
-        projectDescriptioinLbl.text = project.title
+    func updateViews(project: Projects) {
+        projectDescriptioinLbl.text = project.name
     }
     
     func configureCell (description: String){

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import ContextMenu
+//import ContextMenu
 
 class GalleryVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     

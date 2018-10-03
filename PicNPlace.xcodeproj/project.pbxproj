@@ -20,7 +20,6 @@
 		7651BB5521355C4800D2D332 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5421355C4800D2D332 /* Project.swift */; };
 		7651BB572135617300D2D332 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB562135617300D2D332 /* GalleryVC.swift */; };
 		7651BB59213562B000D2D332 /* ConMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB58213562B000D2D332 /* ConMenuVC.swift */; };
-		7651BB5C2135F7E200D2D332 /* PicNPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */; };
 		7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB7E2135FEC600D2D332 /* ProjectCell.swift */; };
 		7654AD642151A90E009279A8 /* ProjectImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD622151A90E009279A8 /* ProjectImage+CoreDataClass.swift */; };
 		7654AD652151A90E009279A8 /* ProjectImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD632151A90E009279A8 /* ProjectImage+CoreDataProperties.swift */; };
@@ -34,6 +33,7 @@
 		769A929B21353799005EA54A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929921353799005EA54A /* Main.storyboard */; };
 		769A929D2135379A005EA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769A929C2135379A005EA54A /* Assets.xcassets */; };
 		769A92A02135379A005EA54A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929E2135379A005EA54A /* LaunchScreen.storyboard */; };
+		76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */; };
 		76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */; };
 		76F335C02140809C00C4C5F8 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F335BF2140809C00C4C5F8 /* PersistenceService.swift */; };
 		CEB15DEAE1F4C833DC11EDA3 /* Pods_PicNPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */; };
@@ -71,6 +71,9 @@
 		769A929C2135379A005EA54A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		769A929F2135379A005EA54A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		769A92A12135379A005EA54A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B20E2721641F42006FFB05 /* PicNPlace 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 2.xcdatamodel"; sourceTree = "<group>"; };
+		76B20E282164DB23006FFB05 /* PicNPlace 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 3.xcdatamodel"; sourceTree = "<group>"; };
+		76B20E2A2165390E006FFB05 /* PicNPlace 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 4.xcdatamodel"; sourceTree = "<group>"; };
 		76BF3B4F213DC66C00A98F61 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		76F335BF2140809C00C4C5F8 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.release.xcconfig"; sourceTree = "<group>"; };
@@ -315,6 +318,7 @@
 				76BF3B50213DC66C00A98F61 /* PopUpVC.swift in Sources */,
 				769A929821353798005EA54A /* ProjectsVC.swift in Sources */,
 				7654AD642151A90E009279A8 /* ProjectImage+CoreDataClass.swift in Sources */,
+				76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */,
 				7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */,
 				769A929421353798005EA54A /* AppDelegate.swift in Sources */,
 				762D0176214871110048B868 /* PhotoCollectionViewCell.swift in Sources */,
@@ -323,7 +327,6 @@
 				7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */,
 				769A929621353798005EA54A /* CameraVC.swift in Sources */,
 				762D0174214870F00048B868 /* PhotoCollectionViewController.swift in Sources */,
-				7651BB5C2135F7E200D2D332 /* PicNPlace.xcdatamodeld in Sources */,
 				76755AA72159816200B83476 /* SnappedVC.swift in Sources */,
 				7651BB4C21355BD200D2D332 /* ProjectsCell.swift in Sources */,
 				762D0178214871330048B868 /* LivePhotoViewController.swift in Sources */,
@@ -534,6 +537,9 @@
 		7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				76B20E2A2165390E006FFB05 /* PicNPlace 4.xcdatamodel */,
+				76B20E282164DB23006FFB05 /* PicNPlace 3.xcdatamodel */,
+				76B20E2721641F42006FFB05 /* PicNPlace 2.xcdatamodel */,
 				7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */,
 			);
 			currentVersion = 7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */;
