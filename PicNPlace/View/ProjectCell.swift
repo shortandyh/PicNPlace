@@ -12,15 +12,15 @@ import ContextMenu
 class ProjectCell: UITableViewCell {
 
     
-    @IBOutlet weak var projectDescriptioinLbl: UILabel!
+    @IBOutlet weak var projectDescriptionLbl: UILabel!
 //    @IBOutlet weak var projectsTitle: UIView!
     
     func updateViews(project: Projects) {
-        projectDescriptioinLbl.text = project.name
+        projectDescriptionLbl.text = project.name
     }
     
     func configureCell (description: String){
-        self.projectDescriptioinLbl.text = description
+        self.projectDescriptionLbl.text = description
     }
     
 }

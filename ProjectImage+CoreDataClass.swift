@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-//@objc(ProjectImage)
+@objc(ProjectImage)
 public class ProjectImage: NSManagedObject {
 
 }

@@ -299,7 +299,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="projectDescriptioinLbl" destination="8mV-c1-poR" id="SFe-ok-gc5"/>
+                                            <outlet property="projectDescriptionLbl" destination="8mV-c1-poR" id="SFe-ok-gc5"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

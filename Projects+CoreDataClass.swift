@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-//@objc(Projects)
+@objc(Projects)
 public class Projects: NSManagedObject {
 
 }

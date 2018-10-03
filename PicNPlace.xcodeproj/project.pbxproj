@@ -24,6 +24,7 @@
 		769A929D2135379A005EA54A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 769A929C2135379A005EA54A /* Assets.xcassets */; };
 		769A92A02135379A005EA54A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 769A929E2135379A005EA54A /* LaunchScreen.storyboard */; };
 		76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB5A2135F7E200D2D332 /* PicNPlace.xcdatamodeld */; };
+		76B20E2C21657E40006FFB05 /* Snapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B20E2B21657E40006FFB05 /* Snapped.swift */; };
 		CEB15DEAE1F4C833DC11EDA3 /* Pods_PicNPlace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6445085DE86F40C3F390CB /* Pods_PicNPlace.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		76B20E2721641F42006FFB05 /* PicNPlace 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 2.xcdatamodel"; sourceTree = "<group>"; };
 		76B20E282164DB23006FFB05 /* PicNPlace 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 3.xcdatamodel"; sourceTree = "<group>"; };
 		76B20E2A2165390E006FFB05 /* PicNPlace 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PicNPlace 4.xcdatamodel"; sourceTree = "<group>"; };
+		76B20E2B21657E40006FFB05 /* Snapped.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapped.swift; sourceTree = "<group>"; };
 		90D371C4B98BBC0C35CD6CC6 /* Pods-PicNPlace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicNPlace.release.xcconfig"; path = "Pods/Target Support Files/Pods-PicNPlace/Pods-PicNPlace.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 		7651BB5321355C3F00D2D332 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76B20E2B21657E40006FFB05 /* Snapped.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				769A929621353798005EA54A /* CameraVC.swift in Sources */,
 				76755AA72159816200B83476 /* SnappedVC.swift in Sources */,
 				7654AD682151A9D9009279A8 /* Projects+CoreDataClass.swift in Sources */,
+				76B20E2C21657E40006FFB05 /* Snapped.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
