@@ -119,7 +119,7 @@ class CameraVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
     //MARK: - IBActions
 
-    @IBAction func showGalleryBtn(_ sender: Any) {
+    @IBAction func ClearBtn(_ sender: Any) {
 //        performSegue(withIdentifier: "gallerySegue", sender: self)
 //        visualEffectView.isHidden = true
 //        captureImageView.isHidden = true

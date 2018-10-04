@@ -10,7 +10,6 @@
 		7651BB4A21355BD200D2D332 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4621355BD100D2D332 /* RoundedImageView.swift */; };
 		7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4721355BD100D2D332 /* RoundedShadowView.swift */; };
 		7651BB4D21355BD200D2D332 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */; };
-		7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7651BB7E2135FEC600D2D332 /* ProjectCell.swift */; };
 		7654AD642151A90E009279A8 /* ProjectImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD622151A90E009279A8 /* ProjectImage+CoreDataClass.swift */; };
 		7654AD652151A90E009279A8 /* ProjectImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD632151A90E009279A8 /* ProjectImage+CoreDataProperties.swift */; };
 		7654AD682151A9D9009279A8 /* Projects+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7654AD662151A9D9009279A8 /* Projects+CoreDataClass.swift */; };
@@ -35,7 +34,6 @@
 		7651BB4721355BD100D2D332 /* RoundedShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowView.swift; sourceTree = "<group>"; };
 		7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
 		7651BB5B2135F7E200D2D332 /* PicNPlace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PicNPlace.xcdatamodel; sourceTree = "<group>"; };
-		7651BB7E2135FEC600D2D332 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
 		7654AD622151A90E009279A8 /* ProjectImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7654AD632151A90E009279A8 /* ProjectImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7654AD662151A9D9009279A8 /* Projects+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Projects+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 				7651BB4621355BD100D2D332 /* RoundedImageView.swift */,
 				7651BB4921355BD100D2D332 /* RoundedShadowButton.swift */,
 				7651BB4721355BD100D2D332 /* RoundedShadowView.swift */,
-				7651BB7E2135FEC600D2D332 /* ProjectCell.swift */,
 				76755AA421597E0F00B83476 /* SnappedPics.swift */,
 			);
 			path = View;
@@ -284,7 +281,6 @@
 				76B20E29216535FF006FFB05 /* PicNPlace.xcdatamodeld in Sources */,
 				7651BB4B21355BD200D2D332 /* RoundedShadowView.swift in Sources */,
 				769A929421353798005EA54A /* AppDelegate.swift in Sources */,
-				7651BB7F2135FEC600D2D332 /* ProjectCell.swift in Sources */,
 				769A929621353798005EA54A /* CameraVC.swift in Sources */,
 				76755AA72159816200B83476 /* SnappedVC.swift in Sources */,
 				7654AD682151A9D9009279A8 /* Projects+CoreDataClass.swift in Sources */,
